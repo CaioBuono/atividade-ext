@@ -1,0 +1,25 @@
+<?php
+//HANDLE HEADER CSS
+$obHandlerHeaderCss = new Handler('estrutura', 'css');
+
+//HANDLE GERAL (RESET) CSS
+$obHandlerGeralCss = new Handler('geral', 'css');
+
+//HANDLER HOME CSS
+$obHandlerHomeCss = new Handler('pages/home', 'css');
+
+//HANDLER HEADER JS
+$obHandlerHeaderJs = new Handler('', 'js');
+
+//VARIAVEIS DA PÁGINA
+$variaveisPagina = [];
+
+//RENDERIZA OS LINK DE CSS NO <HEAD>
+$variaveisPagina['headLinkCss'] = $obHandlerHeaderCss->getArquivosHandler();
+$variaveisPagina['headLinkCss'] .= $obHandlerHomeCss->getArquivosHandler();
+$variaveisPagina['headLinkCss'] .= $obHandlerGeralCss->getArquivosHandler();
+
+//RENDERIZA AS CONEXÕES COM O JS NO <HEAD>
+$variaveisPagina['headLinkJs'] = $obHandlerHeaderJs->getArquivosHandler();
+
+echo TemaLayout::getLayout($variaveisPagina, 'estrutura', 'estrutura-header.tevivo');

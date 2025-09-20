@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/src/images/favicon/favicon-selo-bem-receber.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  {{headLinkCss}}
+  {{headLinkJs}}
+  <title>Sebrae | Bem-receber</title>
+</head>
+<body>
+  <header class="boxHeader">
+    <div class="boxHeaderLayout">
+      <div class="logoHeader">
+        <a href="/">
+          <img src="/src/images/pages/home/tietevivo.png" alt="Logo do site">
+        </a>
+      </div>
+
+      <button class="hamburguer" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="boxNavegacao">
+        <nav class="navegaaco">
+          <ul class="boxItemNavegacaco">
+            <li>
+              <a href="/">Inicio</a>
+            </li>
+            <li>
+              <a href="#">Curso</a>
+            </li>
+            <li>
+              <a href="#">Empresas</a>
+            </li>
+            <li>
+              <a href="#">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>

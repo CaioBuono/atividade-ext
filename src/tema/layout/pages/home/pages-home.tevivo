@@ -1,0 +1,21 @@
+<main class="boxPrincipal">
+  <section class="boxApresentacao">
+    {{homeSessaoApresentacao}}
+  </section>
+
+  <section class="boxInformacoes">
+    {{homeSessaoInformacoes}}
+  </section>
+
+  <section class="boxInstrutores">
+    {{homeSessaoInstrutores}}
+  </section>
+
+  <section class="boxFeedbacks">
+    {{homeSessaoFeedbacks}}
+  </section>
+
+  <section class="boxPlacaSelo">
+    {{homeSessaoPlacaSelo}}
+  </section>
+</main>

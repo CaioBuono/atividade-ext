@@ -1,0 +1,22 @@
+<div class="boxInstrutoresLayout">
+  <div class="boxInstrutoresTexto">
+    <p>{{paragrafo-inicial}}</p>
+    <h1>{{titulo}}</h1>
+    <p>{{paragrafo-secundario}}</p>
+    <a href="#">{{texto-link}}</a>
+  </div>
+
+  <div class="boxInstrutoresImagem">
+    <div class="boxProfImagem">
+      <img src="https://s2.glbimg.com/34jyFQ0D7QORvSpxjRK14zAEmjnUqL-UVEuaPrn6SYo-eKUhtAwqByBTGyh2F6TI/i.glbimg.com/og/ig/f/original/2014/06/23/agostinho.jpg" alt="Foto do professor">
+      <p>{{professor-inicial}}</p>
+      <span>{{span-inicial}}</span>
+    </div>
+
+    <div class="boxProfImagem">
+      <img src="https://images.virgula.me/2013/11/18/3632916978-robert-deniro-como-travis-bickle-em-taxi-driver-750x750.jpg" alt="Foto do professor">
+      <p>{{professor-secundario}}</p>
+      <span>{{span-secundario}}</span>
+    </div>
+  </div>
+</div>

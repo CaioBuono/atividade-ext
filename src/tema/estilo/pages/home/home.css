@@ -1,0 +1,361 @@
+/** INICIO DOS ESTILOS DA SESSÃO DE APRESENTAÇÃO (1 SECTION) */
+
+.boxApresentacao{
+  padding: 60px 0 60px 0;
+  background-image: url('/src/images/pages/home/background-apresentacao.png');
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-color: #FBCE31;
+}
+
+.apresentacaoInicial{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.boxTextoApresentacao{
+  max-width: 520px;
+  width: 100%;
+  color: #FFFFFF;
+  flex: 1 1 auto;
+  margin-right: 70px;
+}
+
+.iconsApresentacao {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconsApresentacao span{
+  margin-right: 20px;
+}
+
+.boxTextoApresentacao .iconsApresentacao i{
+  font-size: 16px;
+  color: #FBCE31;
+}
+
+.btnEnviar{
+  width: 180px;
+  height: 46px;
+  margin-top: 25px;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
+  background-color: #FBCE31;
+  color: #FFFFFF;
+  font-weight: 600;
+  display: block;
+}
+
+.btnEnviar:hover{
+  background-color: #e7bd27;
+  cursor: pointer;
+}
+
+.boxImagemApresentacao{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxImagemApresentacao img{
+  width: 400px;
+}
+
+#tituloApresentacao{
+  font-size: 32.5px;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+#tituloApresentacao span{
+  color: #FBCE31;
+}
+
+#paragrafoApresentacao{
+  color: #FBCE31;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+#paragrafoInfoApresentacao{
+  color: rgba(255, 255, 255, 0.692);
+  width: 80%;
+}
+
+/** FIM DOS ESTILOS DA SESSÃO DE APRESENTAÇÃO (1 SECTION) */
+
+
+/** INICIO DOS ESTILOS DA SESSÃO DE INFORMAÇÕES (2 SECTION) */
+
+.boxInformacoes{
+  background-color: #f0f5e0;
+  display: flex;
+  justify-content: center;
+  padding: 100px 50px 100px 50px;
+}
+
+.boxInfoTitulo{
+  padding: 20px;
+  line-height: 40px;
+}
+
+.boxInformacoesLayout{
+  max-width: 1000px;
+  margin: 0  auto;
+  text-align: center;
+}
+
+.boxInfoAdicional{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.boxInfoIcon{
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.boxInfoPadrao{
+  background-color: #4BB6F5;
+  color: #FFFFFF;
+  padding: 24px 20px 24px 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.boxInfoPadrao span{
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.boxInfoPadrao p{
+  text-align: start;
+  margin-left: 4px;
+}
+
+.boxBotaoInformacoes{
+  display: flex;
+  justify-content: center;
+}
+
+.boxBotaoInformacoes .btnEnviar{
+  background-color: #4BB6F5;
+  width: 130px;
+  font-size: 15px;
+}
+
+.boxBotaoInformacoes .btnEnviar:hover{
+  background-color: #3fa4df;
+}
+
+/** FIM DOS ESTILOS DA SESSÃO DE INFORMAÇÕES (2 SECTION) */
+
+
+/** INICIO DOS ESTILOS DA SESSÃO DE INSTRUTORES (3 SECTION) */
+
+.boxInstrutores{
+  display: flex;
+  justify-content: center;
+  background-color: #F9C718;
+  padding: 100px 20px 100px 20px;
+}
+
+.boxInstrutoresLayout{
+  display: flex;
+  max-width: 1030px;
+  width: 100%;
+  padding: 30px;
+}
+
+.boxInstrutoresTexto{
+  padding: 20px;
+  width: 100%;
+}
+
+.boxInstrutoresTexto h1{
+  padding-top: 6px;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
+.boxInstrutoresTexto p{
+  font-size: 15px;
+}
+
+.boxInstrutoresTexto a{
+  display: block;
+  padding-top: 12px;
+  width: 78px;
+  color: #0066cc;
+}
+
+.boxInstrutoresImagem{
+  display: flex;
+  gap: 24px;
+}
+
+.boxInstrutoresImagem p{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.boxInstrutoresImagem span{
+  font-size: 13.5px;
+}
+
+.boxProfImagem{
+  max-width: 345px;
+  width: 100%;
+}
+
+.boxProfImagem img{
+  max-width: 345px;
+  height: 243px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/** FIM DOS ESTILOS DA SESSÃO DE INSTRUTORES (3 SECTION) */
+
+
+/** INICIO DOS ESTILOS DA SESSÃO OS FEEDBCKAS (4 SECTION) */
+
+.boxFeedbacks{
+  display: flex;
+  justify-content: center;
+  background-color: #eabd18f7;
+  padding: 100px 20px 100px 20px;
+}
+
+.boxFeedbacksLayout{
+  max-width: 1034px;
+  width: 100%;
+}
+
+.boxTextoFeedbacks{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 42px;
+  font-size: 20px;
+}
+
+.boxTextoFeedbacks span{
+  display: block;
+  text-align: center;
+}
+
+.boxFeedbacksGeral{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.boxFeedbackEmpresa{
+  padding: 20px;
+  background-color: #d7ac10;
+  border-radius: 8px;
+  max-width: 304px;
+  width: 100%;
+}
+
+.boxFeedbackEmpresa p{
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.boxFeedbackEmpresa i{
+  font-size: 40px;
+}
+
+.boxFeedbackEmpresa{
+  font-size: 13.9px;
+}
+
+.representanteEmpresa{
+  font-size: 16px !important;
+  font-weight: 500;
+}
+.boxTextoFeedbacks h1 {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+/** FIM DOS ESTILOS DA SESSÃO DOS FEEDBACKS (4 SECTION) */
+
+
+/** INICIO DOS ESTILOS DA SESSÃO DA PLACA (5 SECTION) */
+
+.boxPlacaSelo{
+  display: flex;
+  align-items: center;
+  background-color: #F9C718;
+  gap: 50px;
+}
+
+.boxPlacaSelo img{
+  width: 1054px;
+  height: 845px;
+}
+
+.boxPlacaSeloTexto h1{
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+
+.boxPlacaSeloTexto .btnEnviar{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 16px;
+  width: 140px;
+}
+
+.boxPlacaSeloTexto .btnEnviar:hover{
+  background-color: #f0f5e0;
+}
+
+/** FIM DOS ESTILOS DA SESSÃO DA PLACA (5 SECTION) */
+
+
+@media screen and (max-width: 700px) {
+  .apresentacaoInicial {
+    flex-direction: column-reverse;
+  }
+  .boxTextoApresentacao{
+    margin: 0;
+  }
+  .iconsApresentacao span {
+    margin-right: 5px;
+  }
+  .boxInfoAdicional {
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxInstrutoresLayout {
+    flex-direction: column;
+  }
+  .boxPlacaSelo,
+  .boxFeedbacksGeral {
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxPlacaSeloTexto {
+    padding: 0 20px;
+  }
+  .boxPlacaSelo {
+    padding-bottom: 40px;
+  }
+}

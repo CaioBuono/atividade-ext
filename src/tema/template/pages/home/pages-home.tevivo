@@ -1,0 +1,36 @@
+<?php
+
+//INICIALIZA AS VARIÁVEIS DE RENDERIZAÇÃO DA PÁGINA
+$variaveisPagina = [];
+
+//RECUPERA AS STRINGS DE LAYOUT DO ARQUIVO DE JSON (SECTION APRESENTAÇÃO)
+$variaveisPagina['homeSessaoApresentacao'] = TemaLayout::renderizarArquivoJSON('pages.json', ['pages', 'home-sessao-apresentacao']);
+
+//RENDERIZA A PRIMEIRA SECTION DE APRESENTAÇÃO DO LAYOUT
+$variaveisPagina['homeSessaoApresentacao'] = TemaLayout::getLayout($variaveisPagina['homeSessaoApresentacao'], 'pages/home', 'pages-home-apresentacao.tevivo');
+
+//RECUPERA AS STRINGS DE LAYOUT DO ARQUIVO DE JSON (SECTION INFORMAÇÕES)
+$variaveisPagina['homeSessaoInformacoes'] = TemaLayout::renderizarArquivoJSON('pages.json', ['pages', 'home-sessao-informacoes']);
+
+//RENDERIZA A SEGUNDA SECTION DE INFORMAÇÕES DO LAYOUT
+$variaveisPagina['homeSessaoInformacoes'] = TemaLayout::getLayout($variaveisPagina['homeSessaoInformacoes'], 'pages/home', 'pages-home-informacoes.tevivo');
+
+//RECUPERA AS STRINGS DE LAYOUT DO ARQUIVO DE JSON (SECTION INSTRUTORES)
+$variaveisPagina['homeSessaoInstrutores'] = TemaLayout::renderizarArquivoJSON('pages.json', ['pages', 'home-sessao-instrutores']);
+
+//RENDERIZA A TERCEIRA SECTION DE INSTRUTORES DO LAYOUT
+$variaveisPagina['homeSessaoInstrutores'] = TemaLayout::getLayout($variaveisPagina['homeSessaoInstrutores'], 'pages/home', 'pages-home-instrutores.tevivo');
+
+//RECUPERA AS STRINGS DE LAYOUT DO ARQUIVO DE JSON (SECTION FEEDBACKS)
+$variaveisPagina['homeSessaoFeedbacks'] = TemaLayout::renderizarArquivoJSON('pages.json', ['pages', 'home-sessao-feedbacks']);
+
+//RENDERIZA A QUARTA SECTION DE FEEDBACKS DO LAYOUT
+$variaveisPagina['homeSessaoFeedbacks'] = TemaLayout::getLayout($variaveisPagina['homeSessaoFeedbacks'], 'pages/home', 'pages-home-feedbacks.tevivo');
+
+//RECUPERA AS STRINGS DE LAYOUT DO ARQUIVO DE JSON (SECTION PLACA|SELO)
+$variaveisPagina['homeSessaoPlacaSelo'] = TemaLayout::renderizarArquivoJSON('pages.json', ['pages', 'home-sessao-placa-selo']);
+
+//RENDERIZA A QUINTA SECTION DA PLACA DO SELO BEM RECEBER
+$variaveisPagina['homeSessaoPlacaSelo'] = TemaLayout::getLayout($variaveisPagina['homeSessaoPlacaSelo'], 'pages/home', 'pages-home-placa-selo.tevivo');
+
+echo TemaLayout::getLayout($variaveisPagina, 'pages/home', 'pages-home.tevivo');

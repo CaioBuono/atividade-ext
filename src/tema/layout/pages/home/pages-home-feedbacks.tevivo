@@ -1,0 +1,28 @@
+<div class="boxFeedbacksLayout">
+  <div class="boxTextoFeedbacks">
+    <h1>{{titulo}}</h1>
+  </div>
+
+  <div class="boxFeedbacksGeral">
+    <div class="boxFeedbackEmpresa">
+      <i class="material-icons">format_quote</i>
+      <p>{{first-feedback}}</p>
+      <p class="representanteEmpresa">{{first-representante}}</p>
+      <span>{{first-span}}</span>
+    </div>
+
+    <div class="boxFeedbackEmpresa">
+      <i class="material-icons">format_quote</i>
+      <p>{{second-feedback}}</p>
+      <p class="representanteEmpresa">{{second-representante}}</p>
+      <span>{{second-span}}</span>
+    </div>
+
+    <div class="boxFeedbackEmpresa">
+      <i class="material-icons">format_quote</i>
+      <p>{{third-feedback}}</p>
+      <p class="representanteEmpresa">{{third-representante}}</p>
+      <span>{{third-span}}</span>
+    </div>
+  </div>
+</div>

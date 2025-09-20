@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap');
+
+.boxHeader{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.boxHeaderLayout{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1038px;
+  width: 100%;
+}
+
+.hamburguer{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburguer span{
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #B4B4B4FF;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hamburguer.active span:nth-child(1){
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguer.active span:nth-child(2){
+  opacity: 0;
+}
+
+.hamburguer.active span:nth-child(3){
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.logoHeader img{
+  width: 100px;
+}
+
+.boxNavegacao .navegaaco .boxItemNavegacaco{
+  display: flex;
+  gap: 50px;
+}
+
+.boxNavegacao .navegaaco .boxItemNavegacaco li{
+  list-style: none;
+}
+
+.boxNavegacao .navegaaco .boxItemNavegacaco li > a{
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px;
+  color: #000000;
+  font-size: 16px;
+}
+.boxNavegacao .navegaaco .boxItemNavegacaco li > a::after{
+  content:"";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #3AA3EF;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .32s cubic-bezier(.2,.8,.2,1);
+}
+.boxNavegacao .navegaaco .boxItemNavegacaco li > a:hover::after,
+.boxNavegacao .navegaaco .boxItemNavegacaco li > a:focus::after{
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 700px) {
+  .hamburguer{
+    display: flex;
+    margin-right: 20px;
+  }
+  .boxNavegacao{
+    display: none;
+    flex-direction: column;
+    background: #FFFFFF;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .boxNavegacao.active{
+    display: flex;
+  }
+  .boxItemNavegacaco{
+    flex-direction: column;
+    gap: 15px;
+  }
+}

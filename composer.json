@@ -1,0 +1,13 @@
+{
+    "name": "caio/projeto-bem-estar",
+    "description": "Projeto do selo bem estar | Sebrae | Atividade de extensão 1",
+    "autoload": {
+        "psr-4": {
+            "Caio\\ProjetoBemEstar\\": "src/"
+        },
+        "classmap": [
+            "src/classes/"
+        ]
+    },
+    "require": {}
+}

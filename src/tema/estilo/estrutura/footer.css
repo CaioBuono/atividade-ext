@@ -1,0 +1,94 @@
+.boxRodape{
+  background-color: #f0f5e0;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.boxRodapeInfoLayout{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 990px;
+  width: 100%;
+}
+
+.boxRodapeLogo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.boxRodapeLogo img{
+  width: 150px;
+}
+
+.boxRodapeLinks span{
+  display: block;
+  text-align: end;
+  margin-bottom: 20px;
+  width: 84px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.boxRodapeListagem{
+  list-style: none;
+}
+
+.boxRodapeListagem a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.boxRodapeListagem li > a{
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px;
+  color: #000000;
+  font-size: 16px;
+}
+.boxRodapeListagem li > a::after{
+  content:"";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #3AA3EF;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .32s cubic-bezier(.2,.8,.2,1);
+}
+.boxRodapeListagem li > a:hover::after,
+.boxRodapeListagem li > a:focus::after{
+  transform: scaleX(1);
+}
+
+.boxRodapeSocial{
+  margin-bottom: 63px;
+  padding-left: 50px;
+}
+
+.boxRodapeSocial p{
+  padding-bottom: 8px;
+  font-weight: 500;
+}
+
+.socialMedia{
+  display: flex;
+  gap: 8px;
+}
+
+.socialMedia span{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px){
+  .boxRodapeInfoLayout{
+    flex-direction: column;
+  }
+  .boxRodapeSocial{
+    margin-top: 65px;
+  }
+}

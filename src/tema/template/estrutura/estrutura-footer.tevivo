@@ -1,0 +1,3 @@
+<?php
+
+echo TemaLayout::getLayout([], 'estrutura', 'estrutura-footer.tevivo');

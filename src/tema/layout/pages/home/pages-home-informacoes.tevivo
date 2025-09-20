@@ -1,0 +1,36 @@
+<div class="boxInformacoesLayout">
+  <div class="boxInfoTitulo">
+    <h1>{{titulo}}</h1>
+    <p>{{paragrafo-principal}}</p>
+  </div>
+
+  <div class="boxInfoAdicional">
+    <div class="boxInfoPadrao">
+      <div class="boxInfoIcon">
+        <i class="material-icons">emoji_events</i>
+        <span>{{fist-span}}</span>
+      </div>
+      <p>{{paragrafo-span-exp}}</p>
+    </div>
+
+    <div class="boxInfoPadrao">
+      <div class="boxInfoIcon">
+        <i class="material-icons">school</i>
+        <span>{{second-span}}</span>
+      </div>
+      <p>{{paragrafo-aula}}</p>
+    </div>
+
+    <div class="boxInfoPadrao">
+      <div class="boxInfoIcon">
+        <i class="material-icons">card_membership</i>
+        <span>{{third-span}}</span>
+      </div>
+      <p>{{paragrafo-certificado}}</p>
+    </div>
+  </div>
+
+  <div class="boxBotaoInformacoes">
+    <button type="button" class="btnEnviar">{{botao-participar}}</button>
+  </div>
+</div>

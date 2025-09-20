@@ -1,0 +1,51 @@
+{
+  "pages": {
+      "home-sessao-apresentacao": {
+          "paragrafo-principal": "CURSO EXCLUSIVO TIETÊ VIVO + SEBRAE",
+          "titulo": "<span>Bem Receber: </span>Fortalecendo pequenos negócios",
+          "paragrafoInfo": "O Programa de Turismo <b>SELO BEM RECEBER</b> visa fortalecer os Pequenos Negócios e Potencializar a Vocação para o Turismo na Região do Tietê Vivo, para o <b>BEM RECEBER!</b>",
+          "botao-inscricao": "Inscreva-se já",
+          "data-apresentacao": "Dia 29 de abril",
+          "local-apresentacao": "Araçatuba - SP",
+          "certificado-apresentacao": "Com certificado"
+      },
+      "home-sessao-informacoes": {
+        "titulo": "Por que realizar o programa de turismo Selo Bem Receber",
+        "paragrafo-principal": "Experiência, treinamento e reconhecimento em um só lugar",
+        "fist-span": "Experiência e autoridade",
+        "paragrafo-span-exp": "3 anos de experiência na qualificação de colaboradores",
+        "second-span": "Aprenda com quem faz a diferença",
+        "paragrafo-aula": "Aulas ministradas pelos maiores especialistas em atendimento e reputação do Brasil",
+        "third-span": "Certificação que o mercado reconhece",
+        "paragrafo-certificado": "Credencial valorizada para ser um referencial na sua empresa",
+        "botao-participar": "Quero participar"
+      },
+      "home-sessao-instrutores": {
+        "paragrafo-inicial": "SEUS MENTORES DA JORNADA",
+        "titulo": "Os melhores especialistas do Reclame AQUI e do mercado",
+        "paragrafo-secundario": "Nossos instrutores não são apenas professores, são especialistas com conhecimento aprofundado e experiência prática.",
+        "texto-link": "Saiba mais",
+        "professor-inicial": "Agostinho",
+        "span-inicial": "Ele é o genro da família Silva, um taxista e \"malandro\" que vive às custas da sogra, Dona Nenê.",
+        "professor-secundario": "Pedrão",
+        "span-secundario": "O motorista de táxi de Nova York Travis Bickle, veterano da Guerra do Vietnã, reflete constantemente sobre a corrupção da vida."
+      },
+      "home-sessao-feedbacks": {
+        "titulo": "Fazemos parte da jornada de empresas que estão transformando o mercado",
+        "first-feedback": "Recentemente concluí a Certificação Especialista em Reclame AQUI pela plataforma RA Educa, o que consolidou ainda mais meu conhecimento e expertise na gestão e aprimoramento da experiência do cliente!",
+        "first-representante": "Marcos Paulo Scatolin Rago",
+        "first-span": "Monitor de Relacionamento com o Cliente na Maxmilhas",
+        "second-feedback": "É uma honra integrar a primeira turma de especialistas do RA e contribuir para elevar os padrões de excelência no cenário do atendimento ao consumidor em âmbito nacional.",
+        "second-representante": "Thaiza Vieira",
+        "second-span": "Especialista em Reclame AQUI na Leveros",
+        "third-feedback": "Sou oficialmente um Especialista em Reclame AQUI! Agora sou um dos ÚNICOS profissionais do mercado certificado pela plataforma, o que valida minhas habilidades.",
+        "third-representante": "Henrique Sidney",
+        "third-span": "Customer Care na Nissan"
+      },
+      "home-sessao-placa-selo": {
+        "titulo": "Certificados que o mercado respeita",
+        "paragrafo": "Conquiste Certificados reconhecidos pelo mercado e amplie suas chances de se diferenciar nas áreas mais concorridas da atualidade.",
+        "botao-participar": "Participar"
+      }
+  }
+}

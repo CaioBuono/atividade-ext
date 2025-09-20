@@ -1,0 +1,9 @@
+<div class="boxPlacaSeloImagem">
+  <img src="/src/images/pages/home/placa-selo.png" alt="Imagem da placa do selo bem receber">
+</div>
+
+<div class="boxPlacaSeloTexto">
+  <h1>{{titulo}}</h1>
+  <p>{{paragrafo}}</p>
+  <button type="button" class="btnEnviar">{{botao-participar}}</button>
+</div>
