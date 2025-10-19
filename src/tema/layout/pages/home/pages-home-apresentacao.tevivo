@@ -1,18 +1,18 @@
 <div class="apresentacaoInicial">
   <div class="boxTextoApresentacao">
-    <p id="paragrafoApresentacao">{{paragrafo-principal}}</p>
-    <h1 id="tituloApresentacao">{{titulo}}</h1>
-    <p id="paragrafoInfoApresentacao">{{paragrafoInfo}}</p>
-    <button type="button" class="btnEnviar">{{botao-inscricao}}</button>
+    <p id="paragrafoApresentacao" data-field="home-sessao-apresentacao.paragrafo-principal">{{paragrafo-principal}}</p>
+    <h1 id="tituloApresentacao" data-field="home-sessao-apresentacao.titulo" data-allow-html>{{titulo}}</h1>
+    <p id="paragrafoInfoApresentacao" data-field="home-sessao-apresentacao.paragrafoInfo" data-allow-html>{{paragrafoInfo}}</p>
+    <button type="button" class="btnEnviar"><span data-field="home-sessao-apresentacao.botao-inscricao">{{botao-inscricao}}</span></button>
     <div class="iconsApresentacao">
       <i class="material-icons">calendar_month</i>
-      <span>{{data-apresentacao}}</span>
+      <span data-field="home-sessao-apresentacao.data-apresentacao">{{data-apresentacao}}</span>
 
       <i class="material-icons">location_on</i>
-      <span>{{local-apresentacao}}</span>
+      <span data-field="home-sessao-apresentacao.local-apresentacao">{{local-apresentacao}}</span>
 
       <i class="material-icons">verified</i>
-      <span>{{certificado-apresentacao}}</span>
+      <span data-field="home-sessao-apresentacao.certificado-apresentacao">{{certificado-apresentacao}}</span>
     </div>
   </div>
 

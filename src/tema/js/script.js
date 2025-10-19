@@ -14,12 +14,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/**
+ * Adiciona evento de abrir e fechar a pop-up em telas menores
+ */
 document.addEventListener("DOMContentLoaded", () => {
   const hamburguerButton = document.querySelector(".hamburguer");
-  const normalMenu       = document.querySelector(".boxNavegacao");
+  const popUp            = document.querySelector(".menuPopUp");
 
+  //REMOVE A POP-UP QUANDO CLICA NO HAMBURGUER
   hamburguerButton.addEventListener("click", () => {
-    hamburguerButton.classList.toggle("active");
-    normalMenu.classList.toggle("active");
+    abreFechaPopUp(hamburguerButton, popUp);
+  });
+
+  //REMOVE A POP-UP QUANDO CLICA FORA DA TELA
+  popUp.addEventListener("click", (e) => {
+    if(e.target == popUp){
+      popUp.classList.remove("active");
+      hamburguerButton.classList.remove("active");
+    }
   });
 });
+
+/**
+ * Abre ou fecha a pop-up caso já esteja ativa
+ * @param hamburguerButton
+ * @param popUp
+ */
+function abreFechaPopUp(hamburguerButton, popUp){
+  let isActive = hamburguerButton.classList.contains("active");
+
+  if(isActive){
+    hamburguerButton.classList.remove("active");
+    popUp.classList.remove("active");
+    return;
+  }
+
+  hamburguerButton.classList.add("active");
+  popUp.classList.add("active");
+}

@@ -1,0 +1,5 @@
+<main class="boxSetContent">
+  <section class="boxDefinirTextos">
+    {{painelSelecionarTextosHome}}
+  </section>
+</main>

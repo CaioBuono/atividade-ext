@@ -24,12 +24,22 @@ class Handler{
   /**
    * Diretório principal dos arquivos de estilo
    */
-  const DIRECTORY_HANDLER_CSS = 'src/tema/estilo/';
+  const DIRECTORY_HANDLER_CSS_PATH = __DIR__ . '/../../tema/estilo/';
+
+  /**
+   * Caminho raiz do servidor para linkar os arquivos CSS
+   */
+  const DIRECTORY_HANDLER_CSS_URL = '/src/tema/estilo/';
 
   /**
    * Diretório principal dos arquivos de js
    */
-  const DIRECTORY_HANDLER_JS = 'src/tema/js/';
+  const DIRECTORY_HANDLER_JS_PATH =  __DIR__ . '/../../tema/js/';
+
+  /**
+   * Caminho raiz do servidor para linkar os arquivos JS
+   */
+  const DIRECTORY_HANDLER_JS_URL = '/src/tema/js/';
 
   /**
    * Método construtor da classe para definir os nível e o tipo do arquivo a serem renderizados
@@ -52,9 +62,9 @@ class Handler{
   public function getArquivosHandler(){
     switch($this->tipoArquivo){
       case 'css':
-        return $this->insertLinkCss(self::DIRECTORY_HANDLER_CSS . $this->nivel);
+        return $this->insertLinkCss(self::DIRECTORY_HANDLER_CSS_PATH . $this->nivel);
       case 'js':
-        return $this->insertLinkJs(self::DIRECTORY_HANDLER_JS . $this->nivel);
+        return $this->insertLinkJs(self::DIRECTORY_HANDLER_JS_PATH . $this->nivel);
     }
   }
 
@@ -65,8 +75,8 @@ class Handler{
    * @return array
    */
   private function getArquivos(array $arquivos){
-    $caminho = ($this->tipoArquivo == 'css') ? self::DIRECTORY_HANDLER_CSS . $this->nivel
-                                             : self::DIRECTORY_HANDLER_JS . $this->nivel;
+    $caminho = ($this->tipoArquivo == 'css') ? self::DIRECTORY_HANDLER_CSS_PATH . $this->nivel
+                                             : self::DIRECTORY_HANDLER_JS_PATH . $this->nivel;
     
     return array_values(array_filter(
       $arquivos,
@@ -84,8 +94,8 @@ class Handler{
    */
   private function insertLinkCss(string $dir){
     $headerHtml = null;
-    foreach($this->getArquivos(scandir($dir)) as $file){ 
-      $headerHtml .= '<link rel="stylesheet" href="' . self::DIRECTORY_HANDLER_CSS . $this->nivel . '/' . $file . '">' . PHP_EOL;
+    foreach($this->getArquivos(scandir($dir)) as $file){
+      $headerHtml .= '<link rel="stylesheet" href="' . self::DIRECTORY_HANDLER_CSS_URL . $this->nivel . '/' . $file . '">' . PHP_EOL;
     }
     return $headerHtml;
   }
@@ -99,7 +109,7 @@ class Handler{
   private function insertLinkJs(string $dir){
     $headerJs = null;
     foreach($this->getArquivos(scandir($dir)) as $file){
-      $headerJs .= '<script src="' . self::DIRECTORY_HANDLER_JS . $this->nivel . '/' . $file .'" defer></script>' . PHP_EOL;
+      $headerJs .= '<script src="' . self::DIRECTORY_HANDLER_JS_URL . $this->nivel . '/' . $file .'" defer></script>' . PHP_EOL;
     }
     return $headerJs;
   }

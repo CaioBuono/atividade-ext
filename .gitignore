@@ -1,0 +1,6 @@
+#CONFIGURAÇÕES DA IDE PHPSTORM
+.idea/
+*.iml
+
+# Dependências do Composer
+vendor/

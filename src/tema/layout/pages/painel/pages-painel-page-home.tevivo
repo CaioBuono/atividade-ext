@@ -1,0 +1,18 @@
+<div class="boxPainelSelecionarTextosHome">
+  <div class="boxTitulo">
+    <h1>Mude a nomeclatura e descrições da página do site</h1>
+  </div>
+
+  <div class="boxSelectSessao">
+    <select name="escolherPage" id="escolherPage" class="sessaoMudarTextos">
+      {{opcoesPagina}}
+    </select>
+    <select name="pageSessao" id="pageSessao" class="sessaoMudarTextos" hidden="hidden">
+      <!--      RENDERIZAÇÃO DAS OPÇÕES DE SESSÃO ASSÍNCRONA-->
+    </select>
+  </div>
+
+  <div class="boxRenderTextoHome" id="imprimirLayoutSessao">
+    <!--    RENDERIZAÇÃO ASSÍNCRONA-->
+  </div>
+</div>

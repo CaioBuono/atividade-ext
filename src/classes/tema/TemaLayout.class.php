@@ -1,16 +1,16 @@
 <?php
 /**
  * Classe responsável pela rendirização dos arquivos de layout do projeto
- * 
+ *
  * @class TemaLayout
- * 
+ *
  * @author Caio Buono <caio.buono8@gmail.com>
  */
 
 class TemaLayout{
 
   /**
-   * Método responsável por retornar o caminho do template 
+   * Método responsável por retornar o caminho do template
    * @method getTemplate
    * @param string $pasta
    * @param string $arquivo
@@ -20,7 +20,7 @@ class TemaLayout{
     if(!strlen($pasta) or !strlen($arquivo)) return null;
 
     $caminho = CAMINHO_TEMPLATE . $pasta . '/' . $arquivo;
-    
+
     if(!file_exists($caminho)) die('Arquivo de template não encontrado: ' . $caminho);
 
     return $caminho;
@@ -38,11 +38,11 @@ class TemaLayout{
     if(!strlen($pasta) or !strlen($arquivo)) return null;
 
     $caminho = CAMINHO_LAYOUT . $pasta . '/' . $arquivo;
-    
+
     if(!file_exists($caminho)) die('Arquivo de layout não encontrado: ' . $caminho);
 
     $conteudoArquivo = file_get_contents($caminho);
-    
+
     $conteudoArquivo = (!empty($variaveis)) ? self::sobrescreverArquivo($variaveis, $conteudoArquivo)
                                             : $conteudoArquivo;
 
@@ -77,7 +77,7 @@ class TemaLayout{
     $caminho = CAMINHO_JSON . $arquivo;
 
     $itensLayout =  json_decode(file_get_contents($caminho), true);
-    if(!isset($itensLayout[$mapNivel[0]]) and !isset($itensLayout[$mapNivel[0]][$mapNivel[1]])) die('JSON de renderização não encontrado!');
+    if(!isset($itensLayout[$mapNivel[0]]) or !isset($itensLayout[$mapNivel[0]][$mapNivel[1]])) die('JSON de renderização não encontrado!');
 
     return $itensLayout[$mapNivel[0]][$mapNivel[1]];
   }

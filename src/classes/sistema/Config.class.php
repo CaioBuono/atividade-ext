@@ -97,5 +97,14 @@ class Config{
     );
   }
 
+  /**
+   * Método responsável por retornar a URI da página solicitada
+   * @method getUri
+   * @return string
+   */
+  public static function getUri(){
+    return trim($_SERVER['REQUEST_URI'], '/');
+  }
+
   
 }

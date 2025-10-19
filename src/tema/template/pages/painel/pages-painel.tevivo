@@ -1,0 +1,7 @@
+<?php
+
+$variaveisPagina = [];
+
+$variaveisPagina['painelSelecionarTextosHome'] = TemaPainelAdmin::getSelectPagesLayout();
+
+echo TemaLayout::getLayout($variaveisPagina, 'pages/painel', 'pages-painel-admin.tevivo');
