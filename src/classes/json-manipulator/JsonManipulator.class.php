@@ -10,6 +10,15 @@
 class JsonManipulator {
 
   /**
+   * Método responsável por retornar o arquivo "pages.json" para realizar alterações
+   * @method getArquivoPagesJson
+   * @return string
+   */
+  public static function getArquivoPagesJson(){
+    return json_decode(file_get_contents(CAMINHO_JSON . 'pages.json'), true);
+  }
+
+  /**
    * Método responsável por retornar o JSON de todas as sessões da página
    * @method getAllPagesSessao
    * @param string $arquivo

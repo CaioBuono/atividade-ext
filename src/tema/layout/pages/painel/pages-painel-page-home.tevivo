@@ -12,7 +12,7 @@
     </select>
   </div>
 
-  <div class="boxRenderTextoHome" id="imprimirLayoutSessao">
+  <div id="imprimirLayoutSessao">
     <!--    RENDERIZAÇÃO ASSÍNCRONA-->
   </div>
 </div>

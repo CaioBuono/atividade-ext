@@ -5,8 +5,8 @@ require __DIR__ . '/../includes.php';
 //TEMPLATE DE RENDERIZAÇÃO HEADER
 include TemaLayout::getTemplate('estrutura', 'estrutura-header.tevivo');
 
-//TEMPLATE DE RENDERIZAÇÃO DO PAINEL
-include TemaLayout::getTemplate('pages/painel', 'pages-painel.tevivo');
+//TEMPLATE DE RENDERIZAÇÃO EMPRESA
+include TemaLayout::getTemplate('pages/empresa', 'pages-empresa.tevivo');
 
-//TEMPLATE DE RENDERIZAÇÃO DO FOOTER
+//TEMPLATE DE RENDERIZAÇÃO FOOTER
 include TemaLayout::getTemplate('estrutura', 'estrutura-footer.tevivo');

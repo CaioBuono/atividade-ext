@@ -1,0 +1,19 @@
+.boxHeader{
+  position: unset; !important;
+/*  Remover ESTILO POSTION*/
+}
+
+.boxEmpresaInformacaoLayout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0 60px 0;
+}
+
+.boxEmpresaInformacao{
+  background-color: #f0f5e0;
+}
+
+.boxEmpresaInformacaoLayout h1{
+
+}

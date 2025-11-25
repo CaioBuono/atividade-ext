@@ -19,7 +19,9 @@ function inserirLayout(htmlLayout){
 document.getElementById("escolherPage").addEventListener("change", async (ev) => {
   const selectPage = ev.target.value;
   inserirLayout("");
+  document.getElementById("imprimirLayoutSessao").className = ""; //REMOVE A CLASSE SEMPRE QUE HÁ UMA MUDANÇA
   if(selectPage == ""){
+    document.getElementById("imprimirLayoutSessao").className = "";
     ocultarSelectSessao();
     return;
   }
@@ -71,7 +73,10 @@ document.getElementById("escolherPage").addEventListener("change", async (ev) =>
 document.getElementById("pageSessao").addEventListener("change", async (ev) => {
   const selectHome = ev.target.value;
   inserirLayout('');
-  if(selectHome == "") return;
+  if(selectHome == ""){
+    document.getElementById("imprimirLayoutSessao").className = "";
+    return;
+  }
 
   const formData = new FormData();
   formData.append("page", selectHome);
@@ -83,7 +88,8 @@ document.getElementById("pageSessao").addEventListener("change", async (ev) => {
 
     let response = await retorno.json();
     inserirLayout(response.layout);
-    attachInlineEditor(document.querySelector(".boxRenderTextoHome"));
+    document.getElementById("imprimirLayoutSessao").className = response.class;
+    attachInlineEditor(document.getElementById("imprimirLayoutSessao"));
   }catch(error){
     console.error("Erro no envio: ", error)
   }
@@ -173,18 +179,37 @@ function attachInlineEditor(root = document) {
     toolbar.style.display = 'none';
   }
 
-  function saveEditing() {
+  async function saveEditing() {
     if (!editingEl) return;
-    const field = editingEl.dataset.field;
-    const allowHtml = editingEl.hasAttribute('data-allow-html');
+    const field          = editingEl.dataset.field;
+    const allowHtml    = editingEl.hasAttribute('data-allow-html');
     const valueToUse = allowHtml ? editingEl.innerHTML : editingEl.textContent;
 
-    // Simulação: só imprime no console (substituir por fetch quando for salvar)
-    console.log('SIMULATED SAVE:', { field, value: valueToUse });
+    try{
+      let formData = new FormData();
+      formData.append('field', field);
+      formData.append('value', valueToUse);
+      formData.append('allowHtml', allowHtml);
 
-    status.textContent = ' Salvo (simulado)';
-    setTimeout(() => { status.textContent = ''; }, 900);
-    stopEditing();
+      retorno = await fetch("ajax/pages/painel/ajax-pages-painel-salvar-texto-sessao.php", {
+        method: "POST",
+        body: formData
+      });
+
+      let response = await retorno.json();
+      if(response.sucesso){
+        status.textContent = " Salvo";
+        setTimeout(() => {
+          status.textContent = "";
+        }, 900);
+        stopEditing();
+      }else{
+        status.textContent = " Erro: " + (response.error || 'Desconhecido');
+        console.warn("Falha ao salvar: ", response);
+      }
+    }catch(error){
+      console.error("Erro no envio: ", error);
+    }
   }
 
   // ligar botões (uma vez)

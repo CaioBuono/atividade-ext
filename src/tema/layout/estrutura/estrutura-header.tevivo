@@ -34,7 +34,7 @@
               <a href="#">Curso</a>
             </li>
             <li>
-              <a href="#">Empresa</a>
+              <a href="/empresa">Empresa</a>
             </li>
             <li>
               <a href="#">Contato</a>
@@ -54,7 +54,7 @@
               <a href="#">Curso</a>
             </li>
             <li>
-              <a href="#">Empresas</a>
+              <a href="/empresa">Empresas</a>
             </li>
             <li>
               <a href="#">Contato</a>

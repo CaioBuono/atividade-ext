@@ -10,7 +10,6 @@
 }
 
 .boxPainelSelecionarTextosHome{
-  background-color: red;
   padding: 40px;
   width: 100%;
 }
@@ -76,4 +75,26 @@
 .editing {
   outline: 3px dashed rgba(0,0,0,0.12);
   background: rgba(255,255,255,0.02);
+}
+
+.boxSessaoImagensPainel .titulo{
+  text-align: center;
+}
+
+.boxSessaoImagensPainel img{
+  display: none;
+}
+
+.swiper-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+
+.brand-info {
+  text-align: center;
+  margin-top: 8px;
+  max-width: 200px;
 }

@@ -11,11 +11,17 @@ $obHandlerHomeCss = new Handler('pages/home', 'css');
 //HANDLER PAINEL CSS
 $obHandlerPainelCss = new Handler('pages/painel', 'css');
 
+//HANDLER EMPRESA CSS
+$obHandlerEmpresaCss = new Handler('pages/empresa', 'css');
+
 //HANDLER HEADER JS
 $obHandlerHeaderJs = new Handler('', 'js');
 
 //HANDLER PAINEL JS
 $obHandlerPainelJs = new Handler('pages/painel', 'js');
+
+//HANDLER EMPRESA JS
+$obHandlerEmpresaJs = new Handler('pages/empresa', 'js');
 
 //VARIAVEIS DA PÁGINA
 $variaveisPagina = [];
@@ -32,9 +38,14 @@ $variaveisPagina['headLinkJs'] = $obHandlerHeaderJs->getArquivosHandler();
 switch(Config::getUri()){
   case 'painel':
     $variaveisPagina['headLinkCss'] .= $obHandlerPainelCss->getArquivosHandler();
-    $variaveisPagina['headLinkJs'] .= $obHandlerPainelJs->getArquivosHandler();
+    $variaveisPagina['headLinkJs']  .= $obHandlerPainelJs->getArquivosHandler();
     $variaveisPagina['headLinkCss'] .= $obHandlerHomeCss->getArquivosHandler(); //NECESSÁRIO O CSS DA HOME PARA APLICAR ESTILOS NOS PREVIEWS
   break;
+  case 'empresa':
+    $variaveisPagina['headLinkCss'] .= Handler::needSwiper(true)['cssLibary']; // ARQUIVOS DA BLIBLIOTECA SERÃO RENDERIZADOS PRIMEIRO
+    $variaveisPagina['headLinkCss'] .= Handler::needSwiper(true)['jsLibary']; // ARQUIVOS DA BLIBLIOTECA SERÃO RENDERIZADOS PRIMEIRO
+    $variaveisPagina['headLinkCss'] .= $obHandlerEmpresaCss->getArquivosHandler();
+    $variaveisPagina['headLinkJs']  .= $obHandlerEmpresaJs->getArquivosHandler();
   default:
     $variaveisPagina['headLinkCss'] .= $obHandlerHomeCss->getArquivosHandler();
 }

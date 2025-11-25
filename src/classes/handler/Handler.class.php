@@ -42,6 +42,30 @@ class Handler{
   const DIRECTORY_HANDLER_JS_URL = '/src/tema/js/';
 
   /**
+   * Método responsável por retornar se é necessário linkar a bliblioteca Swiper no Layout atual
+   * @method needSwiper
+   * @param $isNeed
+   * @return array|null
+   */
+  public static function needSwiper(bool $isNeed = false){
+    if(!$isNeed) return null;
+
+    return self::getSwiper();
+  }
+
+  /**
+   * Método responsável por retornar a bliblioteca Swiper no Layout atual
+   * @method getSwiper
+   * @return array
+   */
+  private static function getSwiper(){
+    return [
+      'cssLibary' => '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>',
+      'jsLibary'  => '<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer=""></script>'
+    ];
+  }
+
+  /**
    * Método construtor da classe para definir os nível e o tipo do arquivo a serem renderizados
    * @method __construct
    * @param string $nivel

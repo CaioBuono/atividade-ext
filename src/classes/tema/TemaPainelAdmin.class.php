@@ -14,7 +14,8 @@ class TemaPainelAdmin{
    * @var array
    */
   private static $pagesExistentes = [
-    'home' => 'Pagina inicial',
+    'home'    => 'Página inicial',
+    'empresa' => 'Página empresas'
   ];
 
   /**
@@ -65,6 +66,7 @@ class TemaPainelAdmin{
    * @return string
    */
   public static function getNomeSessao(string $hash){
+    //HOME
     $mapNome = [
       'home-sessao-apresentacao' => 'Sessão de apresentação',
       'home-sessao-informacoes'  => 'Sessão de informações',
@@ -72,6 +74,11 @@ class TemaPainelAdmin{
       'home-sessao-feedbacks'    => 'Sessão de feedbacks',
       'home-sessao-placa-selo'   => 'Sessão da placa do selo'
     ];
+
+    //EMPRESA
+    $mapNome = array_merge($mapNome, [
+      'empresa-sessao-credenciais' => 'Sessão de credenciais'
+    ]);
 
     return $mapNome[$hash];
   }

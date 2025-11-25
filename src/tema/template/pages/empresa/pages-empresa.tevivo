@@ -1,0 +1,9 @@
+<?php
+
+$variaveisPagina = [];
+
+//RECUPERA AS STRINGS DE LAYOUT DO ARQUIVO DE JSON (SECTION CREDENCIAIS)
+$variaveisPagina['empresaSessaoCredenciadas'] = TemaLayout::renderizarArquivoJSON('pages.json', ['pages', 'empresa-sessao-credenciais']);
+$variaveisPagina['empresaSessaoCredenciadas'] = TemaLayout::getLayout($variaveisPagina['empresaSessaoCredenciadas'],'pages/empresa', 'pages-empresa-credenciadas.tevivo');
+
+echo TemaLayout::getLayout($variaveisPagina, 'pages/empresa', 'pages-empresa.tevivo');

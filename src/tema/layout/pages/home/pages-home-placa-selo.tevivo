@@ -3,7 +3,7 @@
 </div>
 
 <div class="boxPlacaSeloTexto">
-  <h1>{{titulo}}</h1>
-  <p>{{paragrafo}}</p>
-  <button type="button" class="btnEnviar">{{botao-participar}}</button>
+  <h1 data-field="home-sessao-placa-selo.titulo">{{titulo}}</h1>
+  <p data-field="home-sessao-placa-selo.paragrafo">{{paragrafo}}</p>
+  <button type="button" class="btnEnviar"><span data-field="home-sessao-placa-selo.botao-participar">{{botao-participar}}</span></button>
 </div>

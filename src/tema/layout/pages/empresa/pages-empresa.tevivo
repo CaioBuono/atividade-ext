@@ -1,0 +1,5 @@
+<main class="boxPrincipalEmpresa">
+  <section class="boxEmpresaInformacao">
+    {{empresaSessaoCredenciadas}}
+  </section>
+</main>
